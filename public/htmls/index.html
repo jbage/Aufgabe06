@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GeoSoftware1 Assignment 4</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+
+
+</head>
+<body onload="onLoad()">
+  <link rel="stylesheet" href="/leaflet/leaflet.css"/>
+  <script src="javascripts/pointcloud.js"></script>
+  <script src="javascripts/point.js"></script>
+
+
+  <div class="a" align="center">
+  <h1>GeoSoftware1 Assignment 4</h1>
+
+  <div>
+  	assignment: 04 MUSTER<br>
+  	course: Geosoftware I SoSe 2020 <br>
+  	authors: Felix Niebl, Nick Jakuschona <br> <br>
+
+  	{{description pending}}
+  </div>
+  <div id="checkbox">
+  </div>
+
+  <a href="/create">Add More Points</a>
+
+  <br>
+  <div id="nextDepartures">
+    <p id="nextDeparturesHeader"></p>
+    <table style="width:100%" align="center" id="nextDeparturesTable">
+      <tr>
+        <th>line nr</th>
+        <th>Bus line</th>
+        <th>departure</th>
+      </tr>
+
+    </table>
+  </div>
+
+  <br>
+
+  <div id="mainMap"></div>
+
+  <br>
+
+  <table style="width:75%" align="center" id="resultTable">
+    <tr>
+      <th>Bus stop name</td>
+      <th>Coordinates</td>
+      <th>Distance (in meters)</td>
+      <th>Bearing</td>
+    </tr>
+  </table>
+
+  </div>
+  <br>
+
+  </div>
+  <script src="/jquery/jquery.min.js"></script>
+<script src="/leaflet/leaflet.js"></script>
+  <script src="javascripts/tokens.js"></script>
+  <script src="javascripts/script.js"></script>
+</body>
+</html>
