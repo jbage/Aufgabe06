@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>GeoSoftware1 Assignment 6 - Editor</title>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,18 +9,35 @@
     <link rel="stylesheet" href="/leaflet/leaflet.css"/>
     <link rel="stylesheet" href="/leaflet-draw/leaflet.draw.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="/jquery/jquery.min.js"></script>
     <script src="/leaflet/leaflet.js"></script>
     <script src="/leaflet-draw/leaflet.draw.js"></script>
 
-    
+
 
 
     <title>Leaflet Draw plugin</title>
 </head>
 <body onload="deleteText()">
-    <a href="/">HOME</a>
-    <hr>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Assignment 06</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/create">Edit Points<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
     address search: <br>
     <input id="addressSearch"></input>, Münster
     <button class="button" type="button" onclick="searchAddress()">search address</button>
@@ -29,24 +47,69 @@
     <button class="button" type="button" onclick="getLocation()">my geolocation</button>
 
 <p>With this function a point can be drawn on the map and as result the corresponding GeoJson is displayed on the right side.</p>
-<div id="main" style="overflow: auto;">
-    <div id="map" style="width: 600px; height: 400px; float: left;"></div>
-    <div id="data">
-        <textarea id="geojsontextarea" onchange="onChange()"></textarea><br />
-    </div>
+<div class="row">
+<div class="col-lg-6" id="map" style="height: 400px"></div>
+<div class="col-lg-6">
+  <div id="data">
+    GeoJSON: <textarea id="geojsontextarea" onchange="onChange()"></textarea></br>
+    ID: <textarea id="id" ></textarea>
+  </div>
+  <div class="container">
+  <div class="btn-group-vertical">
+  <button onclick="save()">Save in MongoDB</button>
+  <button onclick="getData()">Get Data saved in MongoDB</button>
+  <button onclick="deleteAll()">Delete all Points saved in MongoDB</button>
+  <button onclick="update()">Update the Point with ID</button>
+  <button onclick="deleteOne()">Delete the Point with ID</button>
+  </div>
+  </div>
 </div>
-<button onclick="save()">Save in MongoDB</button>
-<button onclick="getData()">Get Data saved in MongoDB</button>
-<button onclick="deleteAll()">Delete all Points saved in MongoDB</button>
+</div>
 
-<button onclick="update()">Update the Point with ID</button>
-<button onclick="deleteOne()">Delete the Point with ID</button>
-ID: <textarea id="id" ></textarea>
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Imprint -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 mb-md-0 mb-12 text-center">
+
+        <!-- Imprint -->
+        <h5 class="text-uppercase">Imprint</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a>Joshua Bagert</a>
+          </li>
+          <li>
+            <a>B.Sc. Geoinformatics</a>
+          </li>
+          <li>
+            <a>j_bage01@uni-muenster.de</a>
+          </li>
+          <li>
+            <a>420 259</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Imprint -->
+</footer>
+<!-- Footer -->
+
 <script src="javascripts/tokens.js"></script>
 <script src="javascripts/point_editor.js"></script>
 <script src="javascripts/script.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
