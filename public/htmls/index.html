@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>GeoSoftware1 Assignment 6</title>
+  <title>GeoSoftware1 Assignment 4</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 
 
@@ -15,38 +14,23 @@
   <script src="javascripts/pointcloud.js"></script>
   <script src="javascripts/point.js"></script>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Assignment 06</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/create">Edit Points</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-  <div align="center">
-    <h1> GeoSoftware1 Assignment 6</h1>
+  <div class="a" align="center">
+  <h1>GeoSoftware1 Assignment 4</h1>
 
-  	 assignment: 04 MUSTER<br>
-  	 course: Geosoftware I SoSe 2020 <br>
-  	 authors: Felix Niebl, Nick Jakuschona <br> <br>
+  <div>
+  	assignment: 04 MUSTER<br>
+  	course: Geosoftware I SoSe 2020 <br>
+  	authors: Felix Niebl, Nick Jakuschona <br> <br>
 
-     <a href="/create">Add More Points</a>
-
+  	{{description pending}}
   </div>
   <div id="checkbox">
   </div>
-  <div class="row">
-  <div class="col-lg-6" id="mainMap"></div>
-  <div class="col-lg-6">
+
+  <a href="/create">Add More Points</a>
+
+  <br>
   <div id="nextDepartures">
     <p id="nextDeparturesHeader"></p>
     <table style="width:100%" align="center" id="nextDeparturesTable">
@@ -60,10 +44,12 @@
   </div>
 
   <br>
-  </div>
-  </div>
-  <div class="a" align="center">
-  <table style="width:50%" align="center" id="resultTable">
+
+  <div id="mainMap"></div>
+
+  <br>
+
+  <table style="width:75%" align="center" id="resultTable">
     <tr>
       <th>Bus stop name</td>
       <th>Coordinates</td>
@@ -71,56 +57,14 @@
       <th>Bearing</td>
     </tr>
   </table>
+
   </div>
   <br>
 
   </div>
-
-  <!-- Footer -->
-  <footer class="page-footer font-small blue pt-4">
-
-    <!-- Footer Imprint -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-12 mb-md-0 mb-12 text-center">
-
-          <!-- Imprint -->
-          <h5 class="text-uppercase">Imprint</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a>Joshua Bagert</a>
-            </li>
-            <li>
-              <a>B.Sc. Geoinformatics</a>
-            </li>
-            <li>
-              <a>j_bage01@uni-muenster.de</a>
-            </li>
-            <li>
-              <a>420 259</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Imprint -->
-  </footer>
-  <!-- Footer -->
-
   <script src="/jquery/jquery.min.js"></script>
-  <script src="/leaflet/leaflet.js"></script>
+<script src="/leaflet/leaflet.js"></script>
   <script src="javascripts/tokens.js"></script>
   <script src="javascripts/script.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
